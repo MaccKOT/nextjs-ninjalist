@@ -1,4 +1,4 @@
-# Next.js Tutorial by The Ney Ninja
+# Next.js Tutorial by The [Net Ninja](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg)
 
 Tutorial video: [https://www.youtube.com/watch?v=A63UxsQsEbU](https://www.youtube.com/watch?v=A63UxsQsEbU)
 
