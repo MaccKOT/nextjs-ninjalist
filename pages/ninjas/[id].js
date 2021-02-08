@@ -17,10 +17,44 @@ export const getStaticPaths = async () => {
   };
 };
 
-const Details = () => {
+export const getStaticProps = async (context) => {
+  const id = context.params.id;
+  const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+  const data = await res.json();
+
+  return {
+    props: { ninja: data },
+  };
+};
+
+const Details = ({ ninja }) => {
   return (
     <div>
-      <h1>Details page</h1>
+      <style jsx>
+        {`
+          span {
+            color: #95a5a6;
+            fontsize: 0.9rem;
+          }
+        `}
+      </style>
+
+      <h1>{ninja.name}</h1>
+      <p>
+        <span>Email</span>: {ninja.email}
+      </p>
+      <p>
+        <span>Company</span>: {ninja.company.name}
+      </p>
+      <p>
+        <span>Web</span>: {ninja.website}
+      </p>
+      <p>
+        <span>Address</span>: {ninja?.address?.city}
+      </p>
+      <p>
+        <span>Phone</span>: {ninja?.phone}
+      </p>
     </div>
   );
 };
