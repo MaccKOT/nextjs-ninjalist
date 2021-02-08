@@ -36,6 +36,7 @@ a:focus {
 
 nav .logo {
   margin-right: auto;
+  cursor: pointer;
 }
 
 footer {
